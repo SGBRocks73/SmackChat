@@ -18,6 +18,7 @@
 		DE85CCF21F690CC900F60555 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85CCF11F690CC900F60555 /* GradientView.swift */; };
 		DEA326FA1F69FB46007C0468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA326F91F69FB46007C0468 /* Constants.swift */; };
 		DEA326FC1F6A00A2007C0468 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA326FB1F6A00A2007C0468 /* LoginVC.swift */; };
+		DEA326FE1F6A05AD007C0468 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA326FD1F6A05AD007C0468 /* AccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		DE85CCF11F690CC900F60555 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		DEA326F91F69FB46007C0468 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEA326FB1F6A00A2007C0468 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		DEA326FD1F6A05AD007C0468 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		E073B6002A413A5A34334E3D /* Pods-SmackChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 				DE615BBA1F68EEA700848DE7 /* ChatVC.swift */,
 				DE615BBC1F68EEBF00848DE7 /* ChannelVC.swift */,
 				DEA326FB1F6A00A2007C0468 /* LoginVC.swift */,
+				DEA326FD1F6A05AD007C0468 /* AccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA326FE1F6A05AD007C0468 /* AccountVC.swift in Sources */,
 				DE615BBB1F68EEA700848DE7 /* ChatVC.swift in Sources */,
 				DE615BBD1F68EEBF00848DE7 /* ChannelVC.swift in Sources */,
 				DEA326FC1F6A00A2007C0468 /* LoginVC.swift in Sources */,

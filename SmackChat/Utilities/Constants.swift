@@ -10,3 +10,5 @@ import Foundation
 
 //segues
 let LOGINVC = "LoginVC"
+let ACCOUNTVC = "AccountVC"
+let UNWIND = "UnwindToChannel"
