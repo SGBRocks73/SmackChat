@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		4ED31BA7927A9A3E49CAB8B5 /* Pods_SmackChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3F757895F526EB0643143 /* Pods_SmackChat.framework */; };
 		DE0C49351F6A45B20081A4D8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C49341F6A45B20081A4D8 /* RoundedButton.swift */; };
+		DE0C49371F6A63730081A4D8 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C49361F6A63730081A4D8 /* UserDataService.swift */; };
 		DE1B76F11F68DFEB0007DF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B76F01F68DFEB0007DF33 /* AppDelegate.swift */; };
 		DE1B76F61F68DFEB0007DF33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1B76F41F68DFEB0007DF33 /* Main.storyboard */; };
 		DE1B76F81F68DFEB0007DF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1B76F71F68DFEB0007DF33 /* Assets.xcassets */; };
 		DE1B76FB1F68DFEB0007DF33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1B76F91F68DFEB0007DF33 /* LaunchScreen.storyboard */; };
-		DE563BC61F6A387500E8325C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE563BC51F6A387500E8325C /* AuthService.swift */; };
 		DE615BBB1F68EEA700848DE7 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE615BBA1F68EEA700848DE7 /* ChatVC.swift */; };
 		DE615BBD1F68EEBF00848DE7 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE615BBC1F68EEBF00848DE7 /* ChannelVC.swift */; };
 		DE85CCF01F68F52300F60555 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE615BB51F68EA9200848DE7 /* SWRevealViewController.m */; };
 		DE85CCF21F690CC900F60555 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE85CCF11F690CC900F60555 /* GradientView.swift */; };
+		DE99B0BC1F6A6EC600046727 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE563BC51F6A387500E8325C /* AuthService.swift */; };
 		DEA326FA1F69FB46007C0468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA326F91F69FB46007C0468 /* Constants.swift */; };
 		DEA326FC1F6A00A2007C0468 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA326FB1F6A00A2007C0468 /* LoginVC.swift */; };
 		DEA326FE1F6A05AD007C0468 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA326FD1F6A05AD007C0468 /* AccountVC.swift */; };
@@ -27,6 +28,7 @@
 		3FC3F757895F526EB0643143 /* Pods_SmackChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmackChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B438BB20824A4D472E58068 /* Pods-SmackChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat.release.xcconfig"; sourceTree = "<group>"; };
 		DE0C49341F6A45B20081A4D8 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		DE0C49361F6A63730081A4D8 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		DE1B76ED1F68DFEB0007DF33 /* SmackChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmackChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1B76F01F68DFEB0007DF33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1B76F51F68DFEB0007DF33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				DE563BC51F6A387500E8325C /* AuthService.swift */,
+				DE0C49361F6A63730081A4D8 /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -241,9 +244,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -271,13 +283,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmackChat-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -290,8 +305,9 @@
 				DEA326FE1F6A05AD007C0468 /* AccountVC.swift in Sources */,
 				DE0C49351F6A45B20081A4D8 /* RoundedButton.swift in Sources */,
 				DE615BBB1F68EEA700848DE7 /* ChatVC.swift in Sources */,
+				DE0C49371F6A63730081A4D8 /* UserDataService.swift in Sources */,
 				DE615BBD1F68EEBF00848DE7 /* ChannelVC.swift in Sources */,
-				DE563BC61F6A387500E8325C /* AuthService.swift in Sources */,
+				DE99B0BC1F6A6EC600046727 /* AuthService.swift in Sources */,
 				DEA326FC1F6A00A2007C0468 /* LoginVC.swift in Sources */,
 				DE85CCF21F690CC900F60555 /* GradientView.swift in Sources */,
 				DE1B76F11F68DFEB0007DF33 /* AppDelegate.swift in Sources */,

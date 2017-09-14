@@ -16,6 +16,10 @@ class AccountVC: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
     
+    //variables
+    var avatarName = "profileDefault"
+    var avatarColour = "[0.5, 0.5, 0.5, 1]"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,12 +32,24 @@ class AccountVC: UIViewController {
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {
+        guard let name = userName.text, userName.text != "" else { return }
         guard let email = emailTextField.text, emailTextField.text != "" else { return }
         guard let password = passwordTextField.text, passwordTextField.text != "" else { return }
         
         AuthService.instance.registerUser(email: email, password: password) { (success) in
             if success {
-                print("Registered User")
+                print("success register")
+                AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
+                    if success {
+                        print("success login")
+                        AuthService.instance.createUser(userName: name, avatarName: self.avatarName, avatarColour: self.avatarColour, email: email, completion: { (success) in
+                            if success {
+                                print("success user data service", UserDataService.instance.id, UserDataService.instance.userName)
+                                self.performSegue(withIdentifier: UNWIND, sender: nil)
+                            }
+                        })
+                    }
+                })
             }
         }
     }
