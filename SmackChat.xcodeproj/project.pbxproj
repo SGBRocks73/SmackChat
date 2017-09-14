@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4ED31BA7927A9A3E49CAB8B5 /* Pods_SmackChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC3F757895F526EB0643143 /* Pods_SmackChat.framework */; };
+		DE047E851F6B427E0095B564 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE047E841F6B427E0095B564 /* CircleImage.swift */; };
 		DE0C49351F6A45B20081A4D8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C49341F6A45B20081A4D8 /* RoundedButton.swift */; };
 		DE0C49371F6A63730081A4D8 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0C49361F6A63730081A4D8 /* UserDataService.swift */; };
 		DE1B76F11F68DFEB0007DF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1B76F01F68DFEB0007DF33 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		3FC3F757895F526EB0643143 /* Pods_SmackChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmackChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B438BB20824A4D472E58068 /* Pods-SmackChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat.release.xcconfig"; sourceTree = "<group>"; };
+		DE047E841F6B427E0095B564 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		DE0C49341F6A45B20081A4D8 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		DE0C49361F6A63730081A4D8 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		DE1B76ED1F68DFEB0007DF33 /* SmackChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmackChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +151,7 @@
 				DE85CCF11F690CC900F60555 /* GradientView.swift */,
 				DE0C49341F6A45B20081A4D8 /* RoundedButton.swift */,
 				DE99B0BF1F6A835600046727 /* AvatarCell.swift */,
+				DE047E841F6B427E0095B564 /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				DEA326FE1F6A05AD007C0468 /* AccountVC.swift in Sources */,
 				DE99B0BE1F6A81CB00046727 /* AvatarVC.swift in Sources */,
 				DE0C49351F6A45B20081A4D8 /* RoundedButton.swift in Sources */,
+				DE047E851F6B427E0095B564 /* CircleImage.swift in Sources */,
 				DE615BBB1F68EEA700848DE7 /* ChatVC.swift in Sources */,
 				DE0C49371F6A63730081A4D8 /* UserDataService.swift in Sources */,
 				DE615BBD1F68EEBF00848DE7 /* ChannelVC.swift in Sources */,

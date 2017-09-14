@@ -21,7 +21,6 @@ let LOGGED_IN_KEY = "token"
 let TOKEN_KEY = "loggedin"
 let USER_EMAIL = "userEmail"
 
-
 //api
 let BASE_URL = "https://sgbimagery-smackchat.herokuapp.com/v1"
 let URL_REGISTER = "\(BASE_URL)/account/register"
@@ -32,3 +31,9 @@ let URL_USER_ADD = "\(BASE_URL)/user/add"
 let HEADER = [
     "Content-Type" : "application/json; charset=utf-8"
 ]
+
+//colours
+let SCPURPLE = #colorLiteral(red: 0.3266413212, green: 0.4215201139, blue: 0.7752227187, alpha: 0.5)
+
+//Notification constants
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")

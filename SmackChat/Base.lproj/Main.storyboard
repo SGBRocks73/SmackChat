@@ -117,7 +117,7 @@
                                 <rect key="frame" x="281" y="90.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-la-kYU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-la-kYU" customClass="CircleImage" customModule="SmackChat" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="6Bv-A2-VsD"/>
@@ -430,7 +430,7 @@
                                     <action selector="avatarPressed:" destination="Fo9-li-23P" eventType="touchUpInside" id="b8n-gh-yi9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="F8q-1K-Nag">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="F8q-1K-Nag" customClass="CircleImage" customModule="SmackChat" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="326.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="hPn-LP-Zqn"/>
@@ -452,6 +452,10 @@
                                     <action selector="generateColourPressed:" destination="Fo9-li-23P" eventType="touchUpInside" id="iF2-un-esO"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="e2Q-FQ-Y2F">
+                                <rect key="frame" x="169" y="285" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -466,13 +470,16 @@
                             <constraint firstItem="9HP-Il-fw7" firstAttribute="top" secondItem="ObK-Nv-0rT" secondAttribute="bottom" constant="50" id="PyN-3w-lt9"/>
                             <constraint firstItem="ObK-Nv-0rT" firstAttribute="centerX" secondItem="7Hw-zN-rcC" secondAttribute="centerX" id="UpP-0b-hYK"/>
                             <constraint firstItem="w3B-l9-fRK" firstAttribute="centerX" secondItem="7Hw-zN-rcC" secondAttribute="centerX" id="WYw-0O-Fbw"/>
+                            <constraint firstItem="e2Q-FQ-Y2F" firstAttribute="centerY" secondItem="7Hw-zN-rcC" secondAttribute="centerY" constant="-30" id="akQ-Vy-Awp"/>
                             <constraint firstItem="w3B-l9-fRK" firstAttribute="top" secondItem="F8q-1K-Nag" secondAttribute="top" id="dbG-Rq-4Bh"/>
                             <constraint firstItem="yC2-oZ-1I7" firstAttribute="trailing" secondItem="I3I-xx-rDV" secondAttribute="trailing" constant="16" id="ezk-3s-Vrz"/>
+                            <constraint firstItem="e2Q-FQ-Y2F" firstAttribute="centerX" secondItem="7Hw-zN-rcC" secondAttribute="centerX" id="gx0-BG-cXf"/>
                             <constraint firstItem="TCD-Mn-m6c" firstAttribute="top" secondItem="w3B-l9-fRK" secondAttribute="bottom" constant="10" id="rjY-yH-oJS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yC2-oZ-1I7"/>
                     </view>
                     <connections>
+                        <outlet property="activitySpinner" destination="e2Q-FQ-Y2F" id="7gj-HL-9bb"/>
                         <outlet property="emailTextField" destination="5WR-MT-Dfa" id="DNO-h4-NFY"/>
                         <outlet property="passwordTextField" destination="0qO-uq-uVw" id="i0g-5d-wmp"/>
                         <outlet property="profileImage" destination="F8q-1K-Nag" id="3CI-Cr-H2H"/>
@@ -502,7 +509,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0QL-Oq-XRM">
-                                <rect key="frame" x="102" y="25" width="170" height="29"/>
+                                <rect key="frame" x="102.5" y="25" width="170" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="594-q7-iOT"/>
                                 </constraints>
