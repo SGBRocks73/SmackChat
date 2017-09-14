@@ -14,6 +14,7 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 let LOGINVC = "LoginVC"
 let ACCOUNTVC = "AccountVC"
 let UNWIND = "UnwindToChannel"
+let AVATARVC = "AvatarVC"
 
 //user defaults
 let LOGGED_IN_KEY = "token"

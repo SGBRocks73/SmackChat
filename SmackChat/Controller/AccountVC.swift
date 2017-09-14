@@ -55,7 +55,7 @@ class AccountVC: UIViewController {
     }
     
     @IBAction func avatarPressed(_ sender: Any) {
-        
+        performSegue(withIdentifier: AVATARVC, sender: nil)
     }
     
     @IBAction func generateColourPressed(_ sender: Any) {
