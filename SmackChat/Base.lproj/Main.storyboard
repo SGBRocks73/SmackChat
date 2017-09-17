@@ -243,6 +243,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="sxi-67-jSy" eventType="touchUpInside" id="tzE-2h-1iE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPX-nM-Rb9">
                                 <rect key="frame" x="145" y="388" width="85" height="30"/>
@@ -297,12 +300,18 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="48f-FH-zAN">
+                                <rect key="frame" x="168.5" y="295" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xPX-nM-Rb9" firstAttribute="top" secondItem="Zbk-Ng-Oer" secondAttribute="bottom" constant="10" id="2Qm-6Q-wF4"/>
                             <constraint firstItem="UHz-wW-dF3" firstAttribute="trailing" secondItem="TjB-Rr-Q1o" secondAttribute="trailing" constant="16" id="4uf-Eb-vxt"/>
                             <constraint firstItem="Zbk-Ng-Oer" firstAttribute="top" secondItem="MVa-IU-JEt" secondAttribute="bottom" constant="60" id="8p4-CB-gsV"/>
+                            <constraint firstItem="48f-FH-zAN" firstAttribute="centerY" secondItem="xnc-zh-2Ic" secondAttribute="centerY" constant="-20" id="A2J-C5-z2K"/>
+                            <constraint firstItem="48f-FH-zAN" firstAttribute="centerX" secondItem="xnc-zh-2Ic" secondAttribute="centerX" id="GN3-8x-BGP"/>
                             <constraint firstItem="7hP-Yk-EFT" firstAttribute="centerX" secondItem="xnc-zh-2Ic" secondAttribute="centerX" id="Lir-Eh-paM"/>
                             <constraint firstItem="Zbk-Ng-Oer" firstAttribute="centerX" secondItem="xnc-zh-2Ic" secondAttribute="centerX" id="OJq-It-dmq"/>
                             <constraint firstItem="MVa-IU-JEt" firstAttribute="top" secondItem="7hP-Yk-EFT" secondAttribute="bottom" constant="70" id="VL0-TL-b7S"/>
@@ -314,6 +323,9 @@
                         <viewLayoutGuide key="safeArea" id="UHz-wW-dF3"/>
                     </view>
                     <connections>
+                        <outlet property="activitySpinner" destination="48f-FH-zAN" id="qTD-yX-Lyb"/>
+                        <outlet property="email" destination="VWv-XB-RhK" id="53U-eh-8AV"/>
+                        <outlet property="password" destination="My2-e3-VKt" id="xjN-JH-eaW"/>
                         <segue destination="Fo9-li-23P" kind="show" identifier="AccountVC" id="hxw-XW-jCY"/>
                     </connections>
                 </viewController>

@@ -23,7 +23,11 @@ class ChannelVC: UIViewController {
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
     }
     
-    @objc func userDataUpdate(_ notification: Notification) {
+    override func viewDidAppear(_ animated: Bool) {
+        checkUserInfo()
+    }
+    
+    func checkUserInfo() {
         if AuthService.instance.loggedIN {
             loginButton.setTitle(UserDataService.instance.userName, for: .normal)
             profileImage.image = UIImage(named: UserDataService.instance.avatarName)
@@ -33,6 +37,10 @@ class ChannelVC: UIViewController {
             profileImage.image = UIImage(named: "menuProfileIcon")
             profileImage.backgroundColor = UIColor.clear
         }
+    }
+    
+    @objc func userDataUpdate(_ notification: Notification) {
+        checkUserInfo()
     }
 
     @IBAction func loginPressed(_ sender: Any) {
