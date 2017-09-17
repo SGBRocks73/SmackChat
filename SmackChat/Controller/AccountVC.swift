@@ -95,6 +95,7 @@ class AccountVC: UIViewController {
         let blue = CGFloat(arc4random_uniform(255)) / 255
         let green = CGFloat(arc4random_uniform(255)) / 255
         backgroundColour = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        avatarColour = "[\(red), \(green), \(blue), 1]"
         UIView.animate(withDuration: 0.2) {
             self.profileImage.backgroundColor = self.backgroundColour
         }
