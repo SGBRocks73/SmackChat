@@ -116,6 +116,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wz4-wr-5lG">
                                 <rect key="frame" x="281" y="90.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelButtonPressed:" destination="1HG-eV-Uk7" eventType="touchUpInside" id="TS6-F1-ANf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Xjg-la-kYU" customClass="CircleImage" customModule="SmackChat" customModuleProvider="target">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
@@ -138,7 +141,7 @@
                                 <rect key="frame" x="0.0" y="132.5" width="375" height="429.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="iEr-lR-K9u">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChannelCell" id="iEr-lR-K9u" customClass="ChannelCell" customModule="SmackChat" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iEr-lR-K9u" id="G8W-JQ-yJ7">
@@ -159,6 +162,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="swn-ol-NWx" id="IUx-a0-dhY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -186,6 +192,7 @@
                         <viewLayoutGuide key="safeArea" id="S3x-Vx-go2"/>
                     </view>
                     <connections>
+                        <outlet property="channelTable" destination="mOd-i0-Ou5" id="CRf-VK-3IQ"/>
                         <outlet property="loginButton" destination="MKC-Xu-0wC" id="2yF-1d-KMz"/>
                         <outlet property="profileImage" destination="Xjg-la-kYU" id="3ky-Qp-Qg2"/>
                         <segue destination="sxi-67-jSy" kind="show" identifier="LoginVC" id="TxJ-JM-DBn"/>
@@ -524,7 +531,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0QL-Oq-XRM">
                                 <rect key="frame" x="102.5" y="25" width="170" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="594-q7-iOT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="594-q7-iOT"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Dark"/>
