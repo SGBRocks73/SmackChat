@@ -15,6 +15,8 @@
 		DE1B76F61F68DFEB0007DF33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1B76F41F68DFEB0007DF33 /* Main.storyboard */; };
 		DE1B76F81F68DFEB0007DF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1B76F71F68DFEB0007DF33 /* Assets.xcassets */; };
 		DE1B76FB1F68DFEB0007DF33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1B76F91F68DFEB0007DF33 /* LaunchScreen.storyboard */; };
+		DE5887951F6E0C2D00269E71 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5887931F6E0C2D00269E71 /* ProfileVC.swift */; };
+		DE5887961F6E0C2D00269E71 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5887941F6E0C2D00269E71 /* ProfileVC.xib */; };
 		DE615BBB1F68EEA700848DE7 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE615BBA1F68EEA700848DE7 /* ChatVC.swift */; };
 		DE615BBD1F68EEBF00848DE7 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE615BBC1F68EEBF00848DE7 /* ChannelVC.swift */; };
 		DE85CCF01F68F52300F60555 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE615BB51F68EA9200848DE7 /* SWRevealViewController.m */; };
@@ -40,6 +42,8 @@
 		DE1B76FA1F68DFEB0007DF33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE1B76FC1F68DFEB0007DF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE563BC51F6A387500E8325C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		DE5887931F6E0C2D00269E71 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		DE5887941F6E0C2D00269E71 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		DE615BB41F68EA9100848DE7 /* SmackChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmackChat-Bridging-Header.h"; sourceTree = "<group>"; };
 		DE615BB51F68EA9200848DE7 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		DE615BB61F68EA9200848DE7 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 		DE1B76EF1F68DFEB0007DF33 /* SmackChat */ = {
 			isa = PBXGroup;
 			children = (
+				DE5887971F6E0C5200269E71 /* XIBs */,
 				DE563BC41F6A385B00E8325C /* Services */,
 				DEA326F81F69FB2D007C0468 /* Utilities */,
 				DE615BB71F68EE3200848DE7 /* Model */,
@@ -126,6 +131,14 @@
 				DE0C49361F6A63730081A4D8 /* UserDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DE5887971F6E0C5200269E71 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				DE5887941F6E0C2D00269E71 /* ProfileVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		DE615BB31F68EA6200848DE7 /* Supporting Files */ = {
@@ -164,6 +177,7 @@
 				DEA326FB1F6A00A2007C0468 /* LoginVC.swift */,
 				DEA326FD1F6A05AD007C0468 /* AccountVC.swift */,
 				DE99B0BD1F6A81CB00046727 /* AvatarVC.swift */,
+				DE5887931F6E0C2D00269E71 /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5887961F6E0C2D00269E71 /* ProfileVC.xib in Resources */,
 				DE1B76FB1F68DFEB0007DF33 /* LaunchScreen.storyboard in Resources */,
 				DE1B76F81F68DFEB0007DF33 /* Assets.xcassets in Resources */,
 				DE1B76F61F68DFEB0007DF33 /* Main.storyboard in Resources */,
@@ -311,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5887951F6E0C2D00269E71 /* ProfileVC.swift in Sources */,
 				DEA326FE1F6A05AD007C0468 /* AccountVC.swift in Sources */,
 				DE99B0BE1F6A81CB00046727 /* AvatarVC.swift in Sources */,
 				DE0C49351F6A45B20081A4D8 /* RoundedButton.swift in Sources */,

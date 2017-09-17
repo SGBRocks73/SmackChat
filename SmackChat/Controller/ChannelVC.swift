@@ -36,7 +36,14 @@ class ChannelVC: UIViewController {
     }
 
     @IBAction func loginPressed(_ sender: Any) {
-        performSegue(withIdentifier: LOGINVC, sender: nil)
+        if AuthService.instance.loggedIN {
+            let profileVC = ProfileVC()
+            profileVC.modalPresentationStyle = .custom
+            present(profileVC, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: LOGINVC, sender: nil)
+        }
+        
     }
     
     
