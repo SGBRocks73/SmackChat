@@ -32,6 +32,7 @@
 		DEA326FA1F69FB46007C0468 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA326F91F69FB46007C0468 /* Constants.swift */; };
 		DEA326FC1F6A00A2007C0468 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA326FB1F6A00A2007C0468 /* LoginVC.swift */; };
 		DEA326FE1F6A05AD007C0468 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA326FD1F6A05AD007C0468 /* AccountVC.swift */; };
+		DEEB73421F6F6A1200A11F57 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEB73411F6F6A1200A11F57 /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		DEA326F91F69FB46007C0468 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEA326FB1F6A00A2007C0468 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		DEA326FD1F6A05AD007C0468 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		DEEB73411F6F6A1200A11F57 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		E073B6002A413A5A34334E3D /* Pods-SmackChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmackChat/Pods-SmackChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				DE563BC51F6A387500E8325C /* AuthService.swift */,
 				DE0C49361F6A63730081A4D8 /* UserDataService.swift */,
 				DE38DA171F6E3B19006BA1B3 /* MessageService.swift */,
+				DEEB73411F6F6A1200A11F57 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEEB73421F6F6A1200A11F57 /* SocketService.swift in Sources */,
 				DE5887951F6E0C2D00269E71 /* ProfileVC.swift in Sources */,
 				DE38DA1C1F6E4863006BA1B3 /* ChannelCell.swift in Sources */,
 				DEA326FE1F6A05AD007C0468 /* AccountVC.swift in Sources */,

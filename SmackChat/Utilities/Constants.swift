@@ -46,3 +46,7 @@ let SCPURPLE = #colorLiteral(red: 0.3266413212, green: 0.4215201139, blue: 0.775
 
 //Notification constants
 let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+let NOTIF_CHANNELS_RELOAD = Notification.Name("notificationChannelsReload")
+let NOTIF_SELECTEDCHANNEL = Notification.Name("notifcationSelectedChannel")
+
+

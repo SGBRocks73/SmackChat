@@ -82,6 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="vEz-C3-2Be"/>
                     </view>
                     <connections>
+                        <outlet property="chatLabel" destination="ePP-fb-lGU" id="kNX-GI-fhp"/>
                         <outlet property="menuButton" destination="Xb9-wb-0o5" id="dlb-Vh-9PT"/>
                     </connections>
                 </viewController>
@@ -107,8 +108,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coo-Vp-WWb">
-                                <rect key="frame" x="16" y="93" width="52" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANNELS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Coo-Vp-WWb">
+                                <rect key="frame" x="16" y="93" width="64.5" height="17"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
