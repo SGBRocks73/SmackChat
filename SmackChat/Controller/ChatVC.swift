@@ -23,7 +23,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         messageTable.delegate = self
         messageTable.dataSource = self
         messageTable.estimatedRowHeight = 80
@@ -40,8 +40,9 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataUpdate(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_SELECTEDCHANNEL, object: nil)
         
-        SocketService.instance.getMessage { (success) in
-            if success {
+        SocketService.instance.getMessage { (newMessage) in
+            if newMessage.channelId == MessageService.instance.selectedChannel?.channelId && AuthService.instance.loggedIN {
+                MessageService.instance.messages.append(newMessage)
                 self.messageTable.reloadData()
                 if MessageService.instance.messages.count > 0 {
                     let index = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
@@ -49,6 +50,15 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
+//        SocketService.instance.getMessage { (success) in
+//            if success {
+//                self.messageTable.reloadData()
+//                if MessageService.instance.messages.count > 0 {
+//                    let index = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+//                    self.messageTable.scrollToRow(at: index, at: .bottom, animated: false)
+//                }
+//            }
+//        }
         
         SocketService.instance.getTyingUsers { (typingUsers) in
             guard let channelId = MessageService.instance.selectedChannel?.channelId else { return }
@@ -84,7 +94,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         
     }
-    
+
     @objc func handleTap() {
         view.endEditing(true)
     }

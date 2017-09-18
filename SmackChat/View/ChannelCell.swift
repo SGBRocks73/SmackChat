@@ -32,6 +32,12 @@ class ChannelCell: UITableViewCell {
     func configCell(channel: Channel) {
         let title = channel.channelTitle ?? ""
         channelName.text = "#\(title)"
+        channelName.font = UIFont(name: "AvenirNext-Regular", size: 14)
+        
+        for unread in MessageService.instance.unreadChannels {
+            if unread == channel.channelId {
+                channelName.font = UIFont(name: "AvenirNext-Bold", size: 16)
+            }
+        }
     }
-
 }

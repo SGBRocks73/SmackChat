@@ -30,6 +30,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.channelTable.reloadData()
             }
         }
+        SocketService.instance.getMessage { (newMessage) in
+            if newMessage.channelId != MessageService.instance.selectedChannel?.channelId && AuthService.instance.loggedIN {
+                MessageService.instance.unreadChannels.append(newMessage.channelId)
+                self.channelTable.reloadData()
+            }
+        }
  
     }
     
@@ -82,6 +88,15 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let channel = MessageService.instance.channels[indexPath.row]
         MessageService.instance.selectedChannel = channel
+        
+        if MessageService.instance.unreadChannels.count > 0 {
+            MessageService.instance.unreadChannels = MessageService.instance.unreadChannels.filter{$0 != channel.channelId}
+        }
+        
+        //reload row only and reselect it
+        let index = IndexPath(row: indexPath.row, section: 0)
+        channelTable.reloadRows(at: [index], with: .none)
+        channelTable.selectRow(at: index, animated: false, scrollPosition: .none)
         NotificationCenter.default.post(name: NOTIF_SELECTEDCHANNEL, object: nil)
         self.revealViewController().revealToggle(animated: true)
     }
