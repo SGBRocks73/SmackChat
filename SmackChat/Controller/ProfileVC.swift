@@ -47,4 +47,7 @@ class ProfileVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func editProfilePressed(_ sender: Any) {
+        
+    }
 }

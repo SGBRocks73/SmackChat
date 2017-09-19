@@ -35,7 +35,7 @@
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Us4-4S-fIF">
-                    <rect key="frame" x="20" y="158.5" width="335" height="350"/>
+                    <rect key="frame" x="20" y="148.5" width="335" height="370"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jI-Db-zY4">
                             <rect key="frame" x="297" y="8" width="30" height="30"/>
@@ -49,7 +49,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wwb-8P-Qbz">
-                            <rect key="frame" x="110" y="60" width="115.5" height="210"/>
+                            <rect key="frame" x="110" y="55" width="115.5" height="210"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7l-7w-bXf">
                                     <rect key="frame" x="0.0" y="0.0" width="115.5" height="30.5"/>
@@ -78,26 +78,59 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLW-yI-RO5">
-                            <rect key="frame" x="140" y="306" width="56" height="36"/>
-                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                            <state key="normal" title="Logout">
-                                <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="s7y-w7-qNS"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="iVX-fV-C11">
+                            <rect key="frame" x="30" y="309" width="275" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLW-yI-RO5" customClass="RoundedButton" customModule="SmackChat" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="36"/>
+                                    <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="Q5v-Wh-2PU"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                    <state key="normal" title="Logout">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="s7y-w7-qNS"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlV-gf-AV6" customClass="RoundedButton" customModule="SmackChat" customModuleProvider="target">
+                                    <rect key="frame" x="155" y="0.0" width="120" height="36"/>
+                                    <color key="backgroundColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="120" id="U9b-1P-4AW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                    <state key="normal" title="Edit Profile">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="editProfilePressed:" destination="-1" eventType="touchUpInside" id="lHE-U6-TFT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="LLW-yI-RO5" firstAttribute="centerX" secondItem="Us4-4S-fIF" secondAttribute="centerX" id="JdE-Js-l11"/>
-                        <constraint firstAttribute="height" constant="350" id="KjP-Tv-RJ5"/>
-                        <constraint firstItem="Wwb-8P-Qbz" firstAttribute="centerY" secondItem="Us4-4S-fIF" secondAttribute="centerY" constant="-10" id="MDR-Db-e5O"/>
+                        <constraint firstAttribute="bottom" secondItem="iVX-fV-C11" secondAttribute="bottom" constant="25" id="CHG-jG-qtI"/>
+                        <constraint firstAttribute="height" constant="370" id="KjP-Tv-RJ5"/>
+                        <constraint firstItem="Wwb-8P-Qbz" firstAttribute="centerY" secondItem="Us4-4S-fIF" secondAttribute="centerY" constant="-25" id="MDR-Db-e5O"/>
                         <constraint firstItem="Wwb-8P-Qbz" firstAttribute="centerX" secondItem="Us4-4S-fIF" secondAttribute="centerX" id="bFB-t8-ZE2"/>
-                        <constraint firstAttribute="bottom" secondItem="LLW-yI-RO5" secondAttribute="bottom" constant="8" id="e9Y-HU-HjD"/>
                         <constraint firstItem="9jI-Db-zY4" firstAttribute="top" secondItem="Us4-4S-fIF" secondAttribute="top" constant="8" id="fNp-5F-y8w"/>
                         <constraint firstAttribute="trailing" secondItem="9jI-Db-zY4" secondAttribute="trailing" constant="8" id="fRX-m1-mSs"/>
+                        <constraint firstItem="iVX-fV-C11" firstAttribute="centerX" secondItem="Us4-4S-fIF" secondAttribute="centerX" id="yUx-L5-wS0"/>
                     </constraints>
                 </view>
             </subviews>

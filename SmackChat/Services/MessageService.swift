@@ -60,12 +60,11 @@ class MessageService {
                         let avatarName = message["userAvatar"].stringValue
                         let avatarColour = message["userAvatarColor"].stringValue
                         let userName = message["userName"].stringValue
-                        let timestamp = message["timestamp"].stringValue
+                        let timestamp = message["timeStamp"].stringValue
                         
                         let message = Message(message: messageBody, userName: userName, channelId: channelId, userAvatar: avatarName, userAvatarColour: avatarColour, id: id, timestamp: timestamp)
                         self.messages.append(message)
                     }
-                    print(self.messages)
                     completion(true)
                 }
             } else {
